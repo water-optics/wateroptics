@@ -2,17 +2,17 @@
     "pH": {
         "matched_label": "pH 9",
         "rgb": [
-            9,
             10,
-            12
+            11,
+            13
         ]
     },
     "Hardness": {
         "matched_label": "Hardness 0ppm",
         "rgb": [
+            8,
             10,
-            12,
-            11
+            9
         ]
     },
     "Hydrogen Sulfide": {
@@ -26,9 +26,9 @@
     "Iron": {
         "matched_label": "Iron 3.0ppm",
         "rgb": [
-            8,
-            10,
-            9
+            9,
+            11,
+            10
         ]
     },
     "Copper": {
@@ -42,17 +42,17 @@
     "Lead": {
         "matched_label": "Lead 50ppb",
         "rgb": [
-            6,
-            8,
-            7
+            7,
+            9,
+            8
         ]
     },
     "Manganese": {
         "matched_label": "Manganese 5.0ppm",
         "rgb": [
-            6,
             8,
-            7
+            10,
+            9
         ]
     },
     "Total Chlorine": {
@@ -74,9 +74,9 @@
     "Nitrate": {
         "matched_label": "Nitrate 100ppm",
         "rgb": [
-            3,
-            5,
-            4
+            4,
+            6,
+            5
         ]
     },
     "Nitrite": {
@@ -90,25 +90,25 @@
     "Sulfate": {
         "matched_label": "Sulfate 0ppm",
         "rgb": [
-            0,
-            2,
-            1
+            1,
+            3,
+            2
         ]
     },
     "Zinc": {
         "matched_label": "Zinc 30ppm",
         "rgb": [
-            1,
-            3,
-            2
+            0,
+            2,
+            1
         ]
     },
     "Fluoride": {
         "matched_label": "Fluoride 0ppm",
         "rgb": [
-            1,
-            3,
-            2
+            0,
+            2,
+            1
         ]
     },
     "Sodium Chloride": {
@@ -122,9 +122,9 @@
     "Total Alkalinity": {
         "matched_label": "Total Alkalinity 240ppm",
         "rgb": [
+            7,
             6,
-            5,
-            3
+            4
         ]
     }
 }
