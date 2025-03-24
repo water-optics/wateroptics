@@ -34,147 +34,72 @@
 					</nav>
 				</header>
 	<script>
-  		fetch("https://raw.githubusercontent.com/water-optics/wateroptics/main/readings.json")
-   			.then(response => response.json())
-    			.then(data => {
-      				const tableBody = document.querySelector("tbody");
-      				tableBody.innerHTML = "";  // Clear the dummy rows
+  fetch("https://raw.githubusercontent.com/water-optics/wateroptics/main/readings.json")
+    .then(response => response.json())
+    .then(data => {
+      const tableBody = document.querySelector("#results-table tbody");
+      tableBody.innerHTML = "";  // Clear any placeholder rows
 
-     				 Object.entries(data).forEach(([parameter, info]) => {
-        			const tr = document.createElement("tr");
-				const label = info.matched_label || "Unknown";
-				const value = extractNumber(label)
+      Object.entries(data).forEach(([parameter, info]) => {
+        const tr = document.createElement("tr");
 
-        			
-        			const value = info.rgb ? `RGB(${info.rgb.join(", ")})` : "N/A";
+        const label = info.matched_label || "Unknown";
+        const value = label.replace(/^[^ ]+ /, "");  // e.g., "120 ppm"
 
-        			tr.innerHTML = `
-         			 <td>${parameter}</td>
-          			<td>${status}</td>
-         			 <td>${value}</td>
-        				`;
-       				 tableBody.appendChild(tr);
-     				 });
-    				})
-    				.catch(error => {
-      					console.error("Error loading water quality data:", error);
-   				 });
-		function extractNumber(label){
-			const match = label.match(/[\d.]+/);
-			return match ? match[0] : "N/A;
-		}
-	</script>
+        // Determine status
+        let status = "Unknown";
+        if (value.includes("ppm") || value.includes("ppb")) {
+          const numeric = parseFloat(value);
+          if (numeric <= 0.5) status = "Good";
+          else if (numeric <= 2) status = "Acceptable";
+          else status = "High";
+        } else if (!isNaN(parseFloat(value))) {
+          const num = parseFloat(value);
+          if (num >= 6.5 && num <= 8.5) status = "Normal";
+          else if ((num >= 6.0 && num < 6.5) || (num > 8.5 && num <= 9)) status = "Acceptable";
+          else status = "Concerning";
+        } else {
+          status = "Good"; // fallback
+        }
 
-			<!-- Main -->
-				<div id="main" class="wrapper style1">
-					<div class="container">
-						<header class="major">
-							<h2>Elements</h2>
-							<p>Ipsum dolor feugiat aliquam tempus sed magna lorem consequat accumsan</p>
-						</header>
-						<!-- Results Section -->
-						<section>
-							<header class="major">
-	  							<h2>Your Water Test Results</h2>
-	  							<p>Here’s a preview of what your test summary might look like.</p>
-							</header>
-  
-							<div class="table-wrapper">
-	  							<table>
-									<thead>
-		  								<tr>
-											<th>Parameter</th>
-											<th>Value</th>
-											<th>Status</th>
-		 								 </tr>
-									</thead>
-									<tbody>
-		  								<tr>
-											<td>pH</td>
-											<td>7.2</td>
-											<td>Normal</td>
-		  								</tr>
-		  								<tr>
-											<td>Hardness</td>
-											<td>120 ppm</td>
-											<td>Acceptable</td>
-		  								</tr>
-		  								<tr>
-											<td>Hydrogen Sulfide</td>
-											<td>Low</td>
-											<td>Good</td>
-		 					 			</tr>
-										<tr>
-											<td>Iron</td>
-											<td>Low</td>
-											<td>Good</td>
-		 					 			</tr>
-										<tr>
-											<td>Copper</td>
-											<td>Low</td>
-											<td>Good</td>
-		 					 			</tr>
-										<tr>
-											<td>Lead</td>
-											<td>Low</td>
-											<td>Good</td>
-		 					 			</tr>
-										<tr>
-											<td>Manganese</td>
-											<td>Low</td>
-											<td>Good</td>
-		 					 			</tr>
-										<tr>
-											<td>Total Chlorine</td>
-											<td>Low</td>
-											<td>Good</td>
-		 					 			</tr>
-										<tr>
-											<td>Mercury</td>
-											<td>Low</td>
-											<td>Good</td>
-		 					 			</tr>
-										<tr>
-											<td>Nitrate</td>
-											<td>Low</td>
-											<td>Good</td>
-		 					 			</tr>
-										<tr>
-											<td>Nitrite</td>
-											<td>Low</td>
-											<td>Good</td>
-		 					 			</tr>
-										<tr>
-											<td>Sulfate</td>
-											<td>Low</td>
-											<td>Good</td>
-		 					 			</tr>
-										<tr>
-											<td>Zinc</td>
-											<td>Low</td>
-											<td>Good</td>
-		 					 			</tr>
-										<tr>
-											<td>Fluoride</td>
-											<td>Low</td>
-											<td>Good</td>
-		 					 			</tr>
-										<tr>
-											<td>Sodium Chloride</td>
-											<td>Low</td>
-											<td>Good</td>
-		 					 			</tr>
-										<tr>
-											<td>Alkalinity</td>
-											<td>Low</td>
-											<td>Good</td>
-		 					 			</tr>
-										
-									</tbody>
-	  							</table>
-							</div>
-  						</section>
-  
+        tr.innerHTML = `
+          <td>${parameter}</td>
+          <td>${value}</td>
+          <td>${status}</td>
+        `;
+        tableBody.appendChild(tr);
+      });
+    })
+    .catch(error => {
+      console.error("Error loading water quality data:", error);
+    });
+</script>
+
+<!-- Main -->
+<div id="main" class="wrapper style1">
+  <div class="container">
+    <header class="major">
+      <h2>Your Water Test Results</h2>
+      <p>Here's a preview of your latest water quality test.</p>
+    </header>
+
+    <div class="table-wrapper">
+      <table id="results-table">
+        <thead>
+          <tr>
+            <th>Parameter</th>
+            <th>Value</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td colspan="3">Loading data...</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
 						<!-- Text -->
 							<section>
 								<h3>Text</h3>
