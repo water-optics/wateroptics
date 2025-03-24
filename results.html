@@ -42,8 +42,10 @@
 
      				 Object.entries(data).forEach(([parameter, info]) => {
         			const tr = document.createElement("tr");
+				const label = info.matched_label || "Unknown";
+				const value = extractNumber(label)
 
-        			const status = info.matched_label || "Unknown";
+        			
         			const value = info.rgb ? `RGB(${info.rgb.join(", ")})` : "N/A";
 
         			tr.innerHTML = `
@@ -57,6 +59,10 @@
     				.catch(error => {
       					console.error("Error loading water quality data:", error);
    				 });
+		function extractNumber(label){
+			const match = label.match(/[\d.]+/);
+			return match ? match[0] : "N/A;
+		}
 	</script>
 
 			<!-- Main -->
