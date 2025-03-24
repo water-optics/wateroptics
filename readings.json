@@ -2,33 +2,33 @@
     "pH": {
         "matched_label": "pH 9",
         "rgb": [
-            8,
             10,
-            9
+            11,
+            13
         ]
     },
     "Hardness": {
         "matched_label": "Hardness 0ppm",
         "rgb": [
-            9,
-            11,
-            10
+            8,
+            10,
+            9
         ]
     },
     "Hydrogen Sulfide": {
         "matched_label": "Hydrogen Sulfide 10ppm",
         "rgb": [
-            10,
-            12,
+            8,
+            9,
             11
         ]
     },
     "Iron": {
         "matched_label": "Iron 3.0ppm",
         "rgb": [
-            10,
-            12,
-            11
+            9,
+            11,
+            10
         ]
     },
     "Copper": {
@@ -58,9 +58,9 @@
     "Total Chlorine": {
         "matched_label": "Total Chlorine 10ppm",
         "rgb": [
-            7,
-            9,
-            8
+            6,
+            8,
+            7
         ]
     },
     "Mercury": {
@@ -74,17 +74,17 @@
     "Nitrate": {
         "matched_label": "Nitrate 100ppm",
         "rgb": [
-            3,
             5,
-            4
+            7,
+            6
         ]
     },
     "Nitrite": {
         "matched_label": "Nitrite 40ppm",
         "rgb": [
-            2,
-            4,
-            3
+            1,
+            3,
+            2
         ]
     },
     "Sulfate": {
@@ -98,17 +98,17 @@
     "Zinc": {
         "matched_label": "Zinc 30ppm",
         "rgb": [
-            1,
-            3,
-            2
+            0,
+            2,
+            1
         ]
     },
     "Fluoride": {
         "matched_label": "Fluoride 0ppm",
         "rgb": [
-            0,
             1,
-            0
+            3,
+            2
         ]
     },
     "Sodium Chloride": {
@@ -122,9 +122,9 @@
     "Total Alkalinity": {
         "matched_label": "Total Alkalinity 240ppm",
         "rgb": [
+            6,
             5,
-            3,
-            4
+            3
         ]
     }
 }
