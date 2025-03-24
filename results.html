@@ -33,6 +33,31 @@
 						</ul>
 					</nav>
 				</header>
+	<script>
+  		fetch("https://raw.githubusercontent.com/water-optics/wateroptics/main/water_results.json")
+   			.then(response => response.json())
+    			.then(data => {
+      				const tableBody = document.querySelector("tbody");
+      				tableBody.innerHTML = "";  // Clear the dummy rows
+
+     				 Object.entries(data).forEach(([parameter, info]) => {
+        			const tr = document.createElement("tr");
+
+        			const status = info.matched_label || "Unknown";
+        			const value = info.rgb ? `RGB(${info.rgb.join(", ")})` : "N/A";
+
+        			tr.innerHTML = `
+         			 <td>${parameter}</td>
+          			<td>${status}</td>
+         			 <td>${value}</td>
+        				`;
+       				 tableBody.appendChild(tr);
+     				 });
+    				})
+    				.catch(error => {
+      					console.error("Error loading water quality data:", error);
+   				 });
+	</script>
 
 			<!-- Main -->
 				<div id="main" class="wrapper style1">
