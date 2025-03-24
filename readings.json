@@ -2,9 +2,9 @@
     "pH": {
         "matched_label": "pH 9",
         "rgb": [
-            10,
             11,
-            13
+            13,
+            10
         ]
     },
     "Hardness": {
@@ -18,9 +18,9 @@
     "Hydrogen Sulfide": {
         "matched_label": "Hydrogen Sulfide 10ppm",
         "rgb": [
-            8,
             9,
-            11
+            11,
+            8
         ]
     },
     "Iron": {
@@ -28,15 +28,15 @@
         "rgb": [
             9,
             11,
-            10
+            8
         ]
     },
     "Copper": {
         "matched_label": "Copper 5ppm",
         "rgb": [
-            8,
-            10,
-            9
+            7,
+            9,
+            6
         ]
     },
     "Lead": {
@@ -52,7 +52,7 @@
         "rgb": [
             7,
             9,
-            8
+            6
         ]
     },
     "Total Chlorine": {
@@ -60,31 +60,31 @@
         "rgb": [
             6,
             8,
-            7
+            5
         ]
     },
     "Mercury": {
         "matched_label": "Mercury 0.08ppm",
-        "rgb": [
-            4,
-            6,
-            5
-        ]
-    },
-    "Nitrate": {
-        "matched_label": "Nitrate 100ppm",
         "rgb": [
             5,
             7,
             6
         ]
     },
+    "Nitrate": {
+        "matched_label": "Nitrate 100ppm",
+        "rgb": [
+            4,
+            6,
+            5
+        ]
+    },
     "Nitrite": {
         "matched_label": "Nitrite 40ppm",
         "rgb": [
-            1,
             3,
-            2
+            5,
+            4
         ]
     },
     "Sulfate": {
@@ -98,9 +98,9 @@
     "Zinc": {
         "matched_label": "Zinc 30ppm",
         "rgb": [
-            0,
-            2,
-            1
+            1,
+            3,
+            2
         ]
     },
     "Fluoride": {
@@ -114,17 +114,17 @@
     "Sodium Chloride": {
         "matched_label": "Sodium Chloride 0ppm",
         "rgb": [
-            1,
-            3,
-            2
+            2,
+            4,
+            3
         ]
     },
     "Total Alkalinity": {
         "matched_label": "Total Alkalinity 240ppm",
         "rgb": [
+            7,
             6,
-            5,
-            3
+            4
         ]
     }
 }
