@@ -12,31 +12,31 @@
         "rgb": [
             7,
             7,
-            5
+            7
         ]
     },
     "Hydrogen Sulfide": {
         "matched_label": "Hydrogen Sulfide 10ppm",
         "rgb": [
-            5,
             7,
-            6
+            7,
+            7
         ]
     },
     "Iron": {
         "matched_label": "Iron 3.0ppm",
         "rgb": [
-            3,
-            5,
-            4
+            4,
+            6,
+            5
         ]
     },
     "Copper": {
         "matched_label": "Copper 5ppm",
         "rgb": [
-            4,
-            4,
-            2
+            3,
+            5,
+            4
         ]
     },
     "Lead": {
@@ -44,15 +44,15 @@
         "rgb": [
             3,
             5,
-            2
+            4
         ]
     },
     "Manganese": {
         "matched_label": "Manganese 5.0ppm",
         "rgb": [
-            4,
-            6,
-            5
+            3,
+            5,
+            4
         ]
     },
     "Total Chlorine": {
@@ -66,9 +66,9 @@
     "Mercury": {
         "matched_label": "Mercury 0.08ppm",
         "rgb": [
-            3,
-            5,
-            4
+            2,
+            4,
+            3
         ]
     },
     "Nitrate": {
@@ -76,55 +76,55 @@
         "rgb": [
             2,
             4,
-            3
+            1
         ]
     },
     "Nitrite": {
         "matched_label": "Nitrite 40ppm",
         "rgb": [
+            1,
             3,
-            3,
-            3
+            2
         ]
     },
     "Sulfate": {
         "matched_label": "Sulfate 0ppm",
         "rgb": [
-            18,
-            18,
-            16
+            29,
+            31,
+            26
         ]
     },
     "Zinc": {
         "matched_label": "Zinc 30ppm",
         "rgb": [
-            2,
-            4,
-            3
+            1,
+            3,
+            2
         ]
     },
     "Fluoride": {
         "matched_label": "Fluoride 0ppm",
         "rgb": [
-            2,
-            2,
+            1,
+            3,
             2
         ]
     },
     "Sodium Chloride": {
         "matched_label": "Sodium Chloride 0ppm",
         "rgb": [
-            1,
-            3,
-            2
+            0,
+            2,
+            1
         ]
     },
     "Total Alkalinity": {
         "matched_label": "Total Alkalinity 240ppm",
         "rgb": [
-            1,
-            3,
-            2
+            2,
+            4,
+            3
         ]
     }
 }
