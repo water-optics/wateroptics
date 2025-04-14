@@ -47,23 +47,53 @@
         const tr = document.createElement("tr");
 
         const label = info.matched_label || "Unknown";
-        const value = label.replace(/^[^ ]+ /, "");  // e.g., "120 ppm"
+       // Extract numeric value and unit from matched_label
+	    const valueMatch = label.match(/([\d.]+)\s*(ppm|ppb)?/i);
+		const rawValue = valueMatch ? parseFloat(valueMatch[1]) : null;
+		const unit = valueMatch ? (valueMatch[2] || "") : "";
 
-        // Determine status
+
         let status = "Unknown";
-        if (value.includes("ppm") || value.includes("ppb")) {
-          const numeric = parseFloat(value);
-          if (numeric <= 0.5) status = "Good";
-          else if (numeric <= 2) status = "Acceptable";
-          else status = "High";
-        } else if (!isNaN(parseFloat(value))) {
-          const num = parseFloat(value);
-          if (num >= 6.5 && num <= 8.5) status = "Normal";
-          else if ((num >= 6.0 && num < 6.5) || (num > 8.5 && num <= 9)) status = "Acceptable";
-          else status = "Concerning";
-        } else {
-          status = "Good"; // fallback
-        }
+		const okLevels = {
+			"pH": [6.5, 7.0, 7.5, 8.0, 8.5],
+			"Hardness": {soft: [0, 25], hard: [50, 100], veryHard: [250, 450]},
+			"Hydrogen Sulfide": [0],
+			"Iron": [0, 0.3],
+			"Copper": [0, 0.2, 0.5, 1],
+			"Lead": [0, 5, 15],
+			"Manganese": [0, 0.05, 0.1],
+			"Total Chlorine": [0, 0.5, 1, 3],
+			"Mercury": [0, 0.002],
+			"Nitrate": [0, 10],
+			"Nitrite": [0, 1],
+			"Sulfate": [0, 200],
+			"Zinc": [0, 5],
+			"Fluoride": [0, 4],
+			"Sodium Chloride": [0, 100, 250],
+			"Total Alkalinity": [40, 80, 120, 180]
+		};
+
+		if (parameter === "pH") {
+			if (okLevels["pH"].includes(rawValue)) status = "OK";
+			else if (rawValue < 6.5) status = "Low";
+			else status = "High";
+		} else if (parameter === "Hardness") {
+			if (okLevels.Hardness.soft.includes(rawValue)) status = "Soft";
+			else if (okLevels.Hardness.hard.includes(rawValue)) status = "Hard";
+			else if (okLevels.Hardness.veryHard.includes(rawValue)) status = "Very Hard";
+			else status = "Unknown";
+		} else if (okLevels[parameter]) {
+		if (okLevels[parameter].includes(rawValue)) {
+			status = "OK";
+		} else if (rawValue < Math.min(...okLevels[parameter])) {
+			status = "Low";
+		} else {
+			status = "High";
+		}
+		} else {
+		status = "Unknown";
+		}
+
 
         tr.innerHTML = `
           <td>${parameter}</td>
