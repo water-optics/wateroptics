@@ -66,8 +66,10 @@
 		Object.entries(data).forEach(([parameter, info]) => {
       		const tr = document.createElement("tr");
       		const label = info.matched_label || "Unknown";
-      		const valueMatch = label.match(/([\d.]+)/);
-      		const rawValue = valueMatch ? parseFloat(valueMatch[1]) : null;
+      		// Extract value safely
+			let value = label.replace(/^[^:]*\s/, "").trim(); // Keeps full text like "10ppm"
+			let rawValue = parseFloat(value.replace(/[^\d.]/g, "")); // Just the number for comparison
+			let unit = value.match(/ppm|ppb/i)?.[0] || "";
 
       		let status = "Unknown";
 
