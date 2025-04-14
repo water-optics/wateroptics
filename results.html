@@ -36,8 +36,7 @@
 	<script>
 
 
-//leave as is until <!--Text --> --------------------------------------------------------------------------------------------------------------------------------------
-		//CODE FOR PUTTING RESULTS ON WEBSITE HERE AND IN <! --mAIN-->
+//leave as is until <!-- Text -- > --------------------------------------------------------------------------------------------------------------------
   fetch("https://raw.githubusercontent.com/water-optics/wateroptics/main/readings.json")
     .then(response => response.json())
     .then(data => {
@@ -103,6 +102,7 @@
     </div>
   </div>
 </div> 
+
 		
 						<!-- Text -->
 							<section>
@@ -144,12 +144,106 @@
 								  <li><b>5 ppm:</b> Strong odor and likely staining – targeted treatment highly recommended.</li>
 								  <li><b>10 ppm:</b> Very strong odor – immediate treatment needed to prevent pipe damage.</li>
 								</ul>
+								
+								<h3>Iron</h3>
+								<p><b>What It Is:</b> Iron is a naturally occurring metal found in soil and rock. It can also enter your water from corroded or rusting pipes, especially in older plumbing systems.</p>
+								<br>
+								<p><b>Why It Matters:</b> While not a health hazard at low levels, iron can cause reddish-brown stains on sinks, tubs, and laundry. It also gives water a metallic taste and can clog pipes and appliances over time.</p>
 								<p> <b>What do your levels mean?</b></p>
 								<ul>
-								  <li><b>6.5–8.5:</b> Ideal range (EPA-recommended for drinking water).</li>
-  								  <li><b>Below 6.5:</b> Acidic – may cause pipe corrosion and metal leaching.</li>
- 								  <li><b>Above 8.5:</b> Alkaline – not harmful but may cause taste and scale issues.</li>
+  									<li><b>0 ppm:</b> ✅ Ideal – No staining, metallic taste, or discoloration.</li>
+  									<li><b>0.3 ppm:</b> Near EPA limit – slight taste change or light staining may begin.</li>
+  									<li><b>0.5 ppm:</b> Light staining and metallic taste likely noticeable.</li>
+  									<li><b>1.0 ppm:</b> Rust-colored staining and sediment visible in fixtures.</li>
+  									<li><b>3.0 ppm:</b> Strong staining, visible particles, and appliance fouling common.</li>
+  									<li><b>5.0 ppm:</b> Severe staining, likely pipe/filter clogging – filtration recommended.</li>
 								</ul>
+								<hr />
+
+								<h3>Copper</h3>
+								<p><b>What It Is:</b> Copper is a metal found in plumbing pipes and fixtures. It can enter drinking water through corrosion of copper pipes, especially when water is acidic or sits in pipes for a long time.</p>
+								<br>
+								<p><b>Why It Matters:</b> Your body needs small amounts of copper, but too much can cause stomach problems, especially in infants. High levels over time may lead to liver or kidney damage and can also cause a metallic taste or blue-green stains on sinks and tubs.</p>
+								<p> <b>What do your levels mean?</b></p>
+								<ul>
+  									<li><b>0 ppm:</b>  OK – No copper detected, no risk of corrosion or staining.</li>
+  									<li><b>0.2 ppm:</b>  OK – Low level, well within safe range.</li>
+  									<li><b>0.5 ppm:</b>  OK – Safe for drinking, no major taste or staining expected.</li>
+  									<li><b>1 ppm:</b>  OK – At the upper end of the safe range. Monitor if using copper pipes.</li>
+  									<li><b>2 ppm:</b>  May cause mild taste changes or staining – consider treatment if persistent.</li>
+ 									<li><b>5 ppm:</b>  High – May cause nausea, staining, or plumbing issues. Action recommended.</li>
+								</ul>
+								<hr />
+
+								<h3>Lead</h3>
+								<p><b>What It Is:</b> Lead is a toxic heavy metal that can enter drinking water from old pipes, solder, or brass fixtures. It’s colorless and tasteless, so it can go unnoticed without testing.</p>
+								<br>
+								<p><b>Why It Matters:</b> Even low levels of lead can be harmful, especially for children and pregnant women. Long-term exposure may lead to learning disabilities, developmental delays, and serious health complications. The EPA recommends zero lead in drinking water.</p>
+								<p> <b>What do your levels mean?</b></p>
+								<ul>
+ 									<li><b>0 ppb:</b>  OK – No lead detected. This is the safest and ideal level.</li>
+  									<li><b>5 ppb:</b>  OK – Well below the EPA action limit. Still considered safe for use.</li>
+  									<li><b>15 ppb:</b>  OK – Right at the EPA action level. Safe, but consider retesting if plumbing is old.</li>
+  									<li><b>50 ppb:</b>  High – Above the safe limit. Not recommended for drinking or cooking.</li>
+								</ul>
+								<hr />
+
+								<h3>Manganese</h3>
+								<p><b>What It Is:</b> Manganese is a naturally occurring metal found in soil and rock. It’s common in well water and can be picked up as water moves through underground deposits.</p>
+								<br>
+								<p><b>Why It Matters:</b> While small amounts of manganese are safe and even essential, higher levels can stain laundry and plumbing, cause a bitter taste, and discolor water. Very high levels may also impact brain development in children with long-term exposure.</p>
+								<p> <b>What do your levels mean?</b></p>
+								<ul>
+  									<li><b>0 ppm:</b> ✅ OK – No manganese detected. Ideal for appearance and taste.</li>
+ 									<li><b>0.05 ppm:</b> ✅ OK – Well below EPA health advisory. No action needed.</li>
+  									<li><b>0.1 ppm:</b> ✅ OK – Slightly elevated but still considered safe.</li>
+  									<li><b>0.5 ppm:</b> ⚠️ May cause light staining and metallic taste. Consider treatment if persistent.</li>
+  									<li><b>1.0 ppm:</b> Noticeable discoloration and black staining may occur.</li>
+  									<li><b>2.0 ppm:</b> High risk of staining and plumbing impact. Treatment recommended.</li>
+  									<li><b>5.0 ppm:</b> 🚫 Very high – Strong staining and taste issues likely. Not recommended for drinking.</li>
+								</ul>
+								<hr />
+
+								<h3>Total Chlorine</h3>
+								<p><b>What It Is:</b> Total chlorine measures both free chlorine (the disinfectant) and combined chlorine (chlorine that has reacted with contaminants). It’s commonly added to city water systems to kill bacteria and viruses.</p>
+								<br>
+								<p><b>Why It Matters:</b> Chlorine is essential for safe drinking water, but too much can irritate eyes and skin, affect taste, and damage plumbing over time. Too little may allow bacteria or algae to grow in pipes and storage tanks.</p>
+								<p> <b>What do your levels mean?</b></p>
+								<ul>
+  									<li><b>0 ppm:</b> ✅ OK – No chlorine present. Safe if you're on a private well and the water is tested for bacteria separately.</li>
+  									<li><b>0.5 ppm:</b> ✅ OK – Low but effective disinfectant level for most systems.</li>
+ 								 	<li><b>1 ppm:</b> ✅ OK – Ideal for disinfection with minimal taste or odor.</li>
+  									<li><b>3 ppm:</b> ✅ OK – Strong disinfection, still within EPA guidelines.</li>
+  									<li><b>5 ppm:</b> ⚠️ Slight chlorine taste or odor likely. May cause irritation for sensitive users.</li>
+  									<li><b>10 ppm:</b> Noticeable chlorine taste and possible drying effect on skin or eyes.</li>
+  									<li><b>20 ppm:</b> 🚫 Very high – Unpleasant taste, odor, and irritation risk. Not recommended for regular drinking.</li>
+								</ul>
+								<hr />
+
+								<h3>Mercury</h3>
+								<p><b>What It Is:</b> Mercury is a toxic heavy metal that can enter water from natural deposits, industrial pollution, or old equipment. It’s dangerous even at very low levels.</p>
+								<br>
+								<p><b>Why It Matters:</b> Mercury can harm the nervous system, kidneys, and developing brains of children and fetuses. It builds up in the body over time and should be avoided entirely in drinking water.</p>
+								<p> <b>What do your levels mean?</b></p>
+								<ul>
+  									<li><b>0 ppm:</b> ✅ OK – No mercury detected. Ideal and safest level.</li>
+  									<li><b>0.002 ppm:</b> ✅ OK – At the EPA maximum contaminant level. Still considered safe.</li>
+  									<li><b>0.005 ppm:</b> ⚠️ Slightly above EPA limit – not recommended for regular drinking.</li>
+  									<li><b>0.01 ppm:</b> Risk of long-term health effects increases. Action strongly advised.</li>
+  									<li><b>0.02 ppm:</b> Elevated mercury – not safe for any use without filtration.</li>
+ 									<li><b>0.04 ppm:</b> 🚫 High mercury – serious health risk. Do not consume.</li>
+  									<li><b>0.08 ppm:</b> 🚫 Extremely high – dangerous level requiring immediate treatment or avoidance.</li>
+								</ul>
+								<hr />
+
+								
+
+
+
+
+
+
+
 
 								<header>
 									<h3>Heading with a Subtitle</h3>
