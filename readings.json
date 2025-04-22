@@ -2,129 +2,129 @@
     "pH": {
         "matched_label": "pH 9",
         "rgb": [
-            8,
-            13,
-            9
+            7,
+            9,
+            6
         ]
     },
     "Hardness": {
         "matched_label": "Hardness 0ppm",
         "rgb": [
-            10,
             15,
-            11
+            19,
+            18
         ]
     },
     "Hydrogen Sulfide": {
         "matched_label": "Hydrogen Sulfide 10ppm",
         "rgb": [
-            6,
-            11,
-            7
+            17,
+            22,
+            18
         ]
     },
     "Iron": {
         "matched_label": "Iron 3.0ppm",
         "rgb": [
-            11,
-            13,
-            8
+            25,
+            27,
+            22
         ]
     },
     "Copper": {
         "matched_label": "Copper 5ppm",
         "rgb": [
-            13,
-            13,
-            13
+            11,
+            16,
+            12
         ]
     },
     "Lead": {
         "matched_label": "Lead 50ppb",
         "rgb": [
-            15,
-            16,
-            10
+            29,
+            32,
+            25
         ]
     },
     "Manganese": {
         "matched_label": "Manganese 5.0ppm",
         "rgb": [
-            16,
-            18,
-            13
+            127,
+            145,
+            103
         ]
     },
     "Total Chlorine": {
-        "matched_label": "Total Chlorine 10ppm",
+        "matched_label": "Total Chlorine 0ppm",
         "rgb": [
-            16,
-            21,
-            14
+            202,
+            223,
+            206
         ]
     },
     "Mercury": {
-        "matched_label": "Mercury 0.08ppm",
+        "matched_label": "Mercury 0ppm",
         "rgb": [
-            95,
-            101,
-            63
+            235,
+            251,
+            248
         ]
     },
     "Nitrate": {
-        "matched_label": "Nitrate 10ppm",
+        "matched_label": "Nitrate 0ppm",
         "rgb": [
-            131,
-            154,
-            136
+            241,
+            251,
+            252
         ]
     },
     "Nitrite": {
-        "matched_label": "Nitrite 40ppm",
+        "matched_label": "Nitrite 0ppm",
         "rgb": [
-            91,
-            114,
-            98
+            246,
+            255,
+            255
         ]
     },
     "Sulfate": {
-        "matched_label": "Sulfate 0ppm",
+        "matched_label": "Sulfate 1200 ppm",
         "rgb": [
-            114,
-            132,
-            106
+            224,
+            243,
+            250
         ]
     },
     "Zinc": {
-        "matched_label": "Zinc 50ppm",
+        "matched_label": "Zinc 5ppm",
         "rgb": [
-            155,
-            169,
-            134
+            226,
+            202,
+            224
         ]
     },
     "Fluoride": {
-        "matched_label": "Fluoride 50ppm",
+        "matched_label": "Fluoride 0ppm",
         "rgb": [
-            225,
-            235,
-            198
+            204,
+            113,
+            128
         ]
     },
     "Sodium Chloride": {
         "matched_label": "Sodium Chloride 2000ppm",
         "rgb": [
             235,
-            242,
-            200
+            226,
+            197
         ]
     },
     "Total Alkalinity": {
         "matched_label": "Total Alkalinity 40ppm",
         "rgb": [
-            254,
+            243,
             255,
-            253
+            236
         ]
     }
 }
