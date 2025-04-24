@@ -97,7 +97,7 @@
 
         tr.innerHTML = `
           <td>${parameter}</td>
-          <td style="max-width: 200px; overflow: visible; white-space: normal;">${value}</td>
+          <td><div style="min-width: 80px; display: inline-block;">${value}</div></td>
           <td>${status}</td>
         `;
         tableBody.appendChild(tr);
