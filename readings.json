@@ -2,33 +2,33 @@
     "pH": {
         "matched_label": "pH 9",
         "rgb": [
-            140,
-            91,
-            51
+            138,
+            90,
+            52
         ]
     },
     "Hardness": {
         "matched_label": "Hardness 0ppm",
         "rgb": [
-            73,
-            114,
-            118
+            72,
+            113,
+            117
         ]
     },
     "Hydrogen Sulfide": {
         "matched_label": "Hydrogen Sulfide 0.5ppm",
         "rgb": [
-            176,
-            202,
-            189
+            175,
+            201,
+            188
         ]
     },
     "Iron": {
         "matched_label": "Iron 0ppm",
         "rgb": [
-            178,
-            204,
-            193
+            177,
+            203,
+            192
         ]
     },
     "Copper": {
@@ -42,25 +42,25 @@
     "Lead": {
         "matched_label": "Lead 0ppb",
         "rgb": [
-            196,
-            193,
-            96
+            195,
+            192,
+            97
         ]
     },
     "Manganese": {
         "matched_label": "Manganese 0.05ppm",
         "rgb": [
-            210,
-            224,
+            209,
+            225,
             127
         ]
     },
     "Total Chlorine": {
         "matched_label": "Total Chlorine 0ppm",
         "rgb": [
-            209,
-            224,
-            201
+            208,
+            223,
+            200
         ]
     },
     "Mercury": {
@@ -98,9 +98,9 @@
     "Zinc": {
         "matched_label": "Zinc 10ppm",
         "rgb": [
-            182,
-            123,
-            169
+            181,
+            122,
+            168
         ]
     },
     "Fluoride": {
@@ -114,8 +114,8 @@
     "Sodium Chloride": {
         "matched_label": "Sodium Chloride 500ppm",
         "rgb": [
-            184,
-            156,
+            183,
+            155,
             108
         ]
     },
@@ -124,7 +124,7 @@
         "rgb": [
             226,
             231,
-            40
+            41
         ]
     }
 }
